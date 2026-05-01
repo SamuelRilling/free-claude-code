@@ -1,0 +1,28 @@
+AFTER CLONING — files and edits needed before running
+=======================================================
+
+1. CREATE .env
+   Copy setup\dot-env  →  .env  (repo root)
+   Fill in your API keys (search for "" to find blanks).
+
+2. EDIT launch-cursor.ps1  (repo root)
+   Line 3:  $proxyDir  — set to the absolute path of this repo
+   Line 4:  $cursorExe — set to the absolute path of Cursor.exe
+   Line 5:  $cursorCfgDir — set to <repo root>\.cursor-claude
+
+   Example:
+     $proxyDir     = "D:\Coding Projects\free-claude-code"
+     $cursorExe    = "D:\Software\cursor\Cursor.exe"
+     $cursorCfgDir = "D:\Coding Projects\free-claude-code\.cursor-claude"
+
+3. EDIT .cursor\settings.json  (repo root)
+   Update the CLAUDE_CONFIG_DIR value to match your repo path:
+     "value": "D:\\Coding Projects\\free-claude-code\\.cursor-claude"
+
+4. INSTALL DEPENDENCIES
+   uv sync
+
+5. DONE
+   Double-click launch-cursor.bat to start the proxy and open Cursor.
+   The proxy also starts automatically when you open this folder in
+   VSCode or Cursor (via .vscode/tasks.json).
