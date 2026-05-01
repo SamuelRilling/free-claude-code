@@ -1,0 +1,6 @@
+{
+  "claudeCode.environmentVariables": [
+    { "name": "ANTHROPIC_BASE_URL", "value": "http://127.0.0.1:8082" },
+    { "name": "CLAUDE_CONFIG_DIR",  "value": "D:\\Coding Projects\\free-claude-code\\.cursor-claude" }
+  ]
+}
